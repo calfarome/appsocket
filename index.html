@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>SOCKET.IO.MAP</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<script src="/socket.io/socket.io.js"></script>
+<style>
+
+.css-icon {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid #ff8888;
+  }
+
+</style>
+
+<div id='map'></div>
+
+<script>
+//Inicializamos socket.io en nuestro cliente que devolvera el href (URL) de la página actual
+var socket=io.connect(window.location.href);
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiY2VzYXIyOCIsImEiOiI0Mm8yUkhnIn0.u8GrcBcjxtt7ao-6LC5TiQ';
+    var map = L.mapbox.map('map', 'cesar28.m194al8c');
+     
+
+var cssIcon = L.divIcon({
+    className: 'css-icon',
+    iconSize: [40, 40]
+});
+
+    map.locate({
+        enableHighAccuracy: true
+      });
+
+    map.on('locationfound', onLocationFound);
+
+   //GEOREFERENCIANDO Y MANDANDO AL SERVIDOR
+  function onLocationFound(position) {
+   console.log(position);
+   var mycoor=position.latlng;
+   var marker = L.marker([mycoor.lat,mycoor.lng]);
+    map.addLayer(marker);
+    marker.bindPopup("CESAR ESTA AQUÍ");
+    socket.emit('mycoordinada',{latlng:mycoor});
+  }
+  //RECIBIENDO COORDENADAS DEL SERVIDOR
+  socket.on('cooruser', onReceiveData);
+
+  function onReceiveData(data){
+   console.log(data);
+   var couser=data.latlng;
+   var marker = L.marker([couser.lat,couser.lng],{icon: cssIcon});
+    map.addLayer(marker);
+    marker.bindPopup("CESAR ESTA AQUÍ");
+  }
+
+</script>
+</body>
+
+</html>
+</body>
+</html>

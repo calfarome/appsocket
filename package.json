@@ -1,0 +1,9 @@
+{
+  "name":"appsocket",
+  "version":"0.0.1",
+  "private":"true",
+  "dependencies":{
+  "express":"4.13.0",
+  "socket.io":"1.3.5"
+  }
+}

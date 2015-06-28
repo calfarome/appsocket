@@ -1,0 +1,144 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/calfarome/Desktop/ProyectosNode/appsocket',
+6 verbose install   [ 'express', 'socket.io' ] ]
+7 info preinstall appsocket@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'express@1.4.28', null ]
+10 verbose cache add name=undefined spec="express@1.4.28" args=["express@1.4.28",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'express@1.4.28',
+11 verbose parsed url   path: 'express@1.4.28',
+11 verbose parsed url   href: 'express@1.4.28' }
+12 verbose cache add [ 'socket.io@1.4.28', null ]
+13 verbose cache add name=undefined spec="socket.io@1.4.28" args=["socket.io@1.4.28",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'socket.io@1.4.28',
+14 verbose parsed url   path: 'socket.io@1.4.28',
+14 verbose parsed url   href: 'socket.io@1.4.28' }
+15 verbose cache add name="express" spec="1.4.28" args=["express","1.4.28"]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: '1.4.28',
+16 verbose parsed url   path: '1.4.28',
+16 verbose parsed url   href: '1.4.28' }
+17 verbose addNamed [ 'express', '1.4.28' ]
+18 verbose addNamed [ '1.4.28', '1.4.28' ]
+19 verbose cache add name="socket.io" spec="1.4.28" args=["socket.io","1.4.28"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '1.4.28',
+20 verbose parsed url   path: '1.4.28',
+20 verbose parsed url   href: '1.4.28' }
+21 verbose addNamed [ 'socket.io', '1.4.28' ]
+22 verbose addNamed [ '1.4.28', '1.4.28' ]
+23 silly lockFile 7ccf9581-express-1-4-28 express@1.4.28
+24 verbose lock express@1.4.28 /home/calfarome/.npm/7ccf9581-express-1-4-28.lock
+25 silly lockFile 828c4d08-socket-io-1-4-28 socket.io@1.4.28
+26 verbose lock socket.io@1.4.28 /home/calfarome/.npm/828c4d08-socket-io-1-4-28.lock
+27 verbose request where is /socket.io
+28 verbose request registry https://registry.npmjs.org/
+29 verbose request id ac0755e81a2d4139
+30 verbose url raw /socket.io
+31 verbose url resolving [ 'https://registry.npmjs.org/', './socket.io' ]
+32 verbose url resolved https://registry.npmjs.org/socket.io
+33 verbose request where is https://registry.npmjs.org/socket.io
+34 info trying registry request attempt 1 at 12:59:16
+35 verbose etag "2RW87HG09NRB6N11GOAVWX82T"
+36 http GET https://registry.npmjs.org/socket.io
+37 verbose request where is /express
+38 verbose request registry https://registry.npmjs.org/
+39 verbose url raw /express
+40 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+41 verbose url resolved https://registry.npmjs.org/express
+42 verbose request where is https://registry.npmjs.org/express
+43 info trying registry request attempt 1 at 12:59:16
+44 verbose etag "PMGCE2Y4A379FKX8YC1YRIKF"
+45 http GET https://registry.npmjs.org/express
+46 http 304 https://registry.npmjs.org/socket.io
+47 silly registry.get cb [ 304,
+47 silly registry.get   { date: 'Fri, 26 Jun 2015 17:59:16 GMT',
+47 silly registry.get     via: '1.1 varnish',
+47 silly registry.get     'cache-control': 'max-age=60',
+47 silly registry.get     etag: '"2RW87HG09NRB6N11GOAVWX82T"',
+47 silly registry.get     age: '13',
+47 silly registry.get     connection: 'keep-alive',
+47 silly registry.get     'x-served-by': 'cache-jfk1023-JFK',
+47 silly registry.get     'x-cache': 'HIT',
+47 silly registry.get     'x-cache-hits': '1',
+47 silly registry.get     'x-timer': 'S1435341556.909685,VS0,VE0',
+47 silly registry.get     vary: 'Accept' } ]
+48 verbose etag https://registry.npmjs.org/socket.io from cache
+49 silly lockFile 828c4d08-socket-io-1-4-28 socket.io@1.4.28
+50 silly lockFile 828c4d08-socket-io-1-4-28 socket.io@1.4.28
+51 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+52 info trying registry request attempt 2 at 13:01:34
+53 verbose etag "PMGCE2Y4A379FKX8YC1YRIKF"
+54 http GET https://registry.npmjs.org/express
+55 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+56 info trying registry request attempt 3 at 13:04:41
+57 verbose etag "PMGCE2Y4A379FKX8YC1YRIKF"
+58 http GET https://registry.npmjs.org/express
+59 http 304 https://registry.npmjs.org/express
+60 silly registry.get cb [ 304,
+60 silly registry.get   { date: 'Fri, 26 Jun 2015 18:04:41 GMT',
+60 silly registry.get     via: '1.1 varnish',
+60 silly registry.get     'cache-control': 'max-age=60',
+60 silly registry.get     etag: '"PMGCE2Y4A379FKX8YC1YRIKF"',
+60 silly registry.get     age: '39',
+60 silly registry.get     connection: 'keep-alive',
+60 silly registry.get     'x-served-by': 'cache-iad2129-IAD',
+60 silly registry.get     'x-cache': 'HIT',
+60 silly registry.get     'x-cache-hits': '3',
+60 silly registry.get     'x-timer': 'S1435341881.657704,VS0,VE0',
+60 silly registry.get     vary: 'Accept' } ]
+61 verbose etag https://registry.npmjs.org/express from cache
+62 silly lockFile 7ccf9581-express-1-4-28 express@1.4.28
+63 silly lockFile 7ccf9581-express-1-4-28 express@1.4.28
+64 error Error: version not found: socket.io@1.4.28
+64 error     at /usr/lib/node_modules/npm/lib/cache/add-named.js:125:12
+64 error     at saved (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+64 error     at Object.oncomplete (fs.js:108:15)
+65 error If you need help, you may report this *entire* log,
+65 error including the npm and node versions, at:
+65 error     <http://github.com/npm/npm/issues>
+66 error System Linux 3.13.0-48-generic
+67 error command "/usr/bin/node" "/usr/bin/npm" "install"
+68 error cwd /home/calfarome/Desktop/ProyectosNode/appsocket
+69 error node -v v0.10.37
+70 error npm -v 1.4.28
+71 verbose exit [ 1, true ]
